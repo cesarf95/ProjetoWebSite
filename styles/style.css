@@ -1,0 +1,44 @@
+:root {
+--bg:#50b3f5b9;
+--card:#9efd04;
+--text:#0fc956;
+--muted:#b9e90d;
+--primary:#f725b1;
+--border:#41ff11;
+
+}
+
+.dark {
+--bg:hwb(216 23% 2%);
+--card:#c42727;
+--text:#0fc956;
+--muted:#b9e90d;
+--primary:#f725b1;
+--border:#ff8800;
+
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: var(--bg);
+}
+
+h1, h2 {
+    margin: 0 0 0.5rem;
+}
+
+.conteudo {
+    max-width: 100vh;
+    margin: 1rem auto;
+    padding: 0 1rem;
+
+}
+
+.cabecalho {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0.75rem;
+   border-bottom: 1px solid var(--border);
+   background-color: var(--card);
+}

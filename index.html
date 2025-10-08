@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Senai</title>
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -30,7 +31,6 @@
                         <option value="">Smartphone</option>
                         <option value="">Cadeira</option>
                         <option value="">Sei la</option>
-                     
                         </select>
                     </label>
                     <label for="preco">Preço(R$)
@@ -40,9 +40,40 @@
                         <input type="number" name="" id="" min="0" step="1" required placeholder="Digite a Quantidade">
                     </label>
                 </div>
-
+                <div class="botoes">
+                    <button type="submit" id="btnSalvar">Adicionar</button>
+                    <button type="reset" id="btnLimpar">Limpar</button>
+                </div>
             </form>
          </section>
+            <section class="conteudo-formulario">
+                <div class="cabecalho-tabela">
+                    <h2>Produtos Cadastrados</h2>
+                    <input type="search" name="" id="Buscar" placeholder="Buscar Produto">
+                    </div>
+                    <div class="secao-tabela">
+                        <table class="tabela">
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Categoria</th>
+                                    <th>Preço(R$)</th>
+                                    <th>Quantidade</th>
+                                    <th>Total(R$)</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="resumo">
+                        <span>Total de itens: <strong>0</strong></span>
+                        <span>Valor total: <strong>0</strong></span>
+                    </div>
+            </section>
       </main>
+      <footer class="rodape">
+        <small>&copy; Designed by César</small>
+      </footer>
 </body>
 </html>
