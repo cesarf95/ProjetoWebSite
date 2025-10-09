@@ -6,74 +6,90 @@
     <title>Loja Senai</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="scripts/script.js"defer>
 </head>
 <body>
     <!-- Cabeçalho -->
-     <header class="cabecalho">
-        <h1>Loja Senai - Cadastro de Produtos</h1>
+    <header class="cabecalho">
+        <h1>Loja Senai - Cadastro de Produto</h1>
         <button id="btnTema" type="button">Mudar Tema</button>
-     </header>
+    </header>
 
-     <!-- Conteúdo Principal -->
-      <main class="Conteudo">
-        <!-- Formulario -->
-         <section class="conteudo-formulario">
+    <!-- Conteúdo Principal -->
+    <main class="conteudo">
+        <!-- Formulário -->
+        <section class="conteudo-formulario">
             <h2>Novo Produto</h2>
             <form id="form-produtos">
                 <div class="grade">
                     <label for="produto">Nome do Produto*
-                        <input type="text" name="" id="produto" required placeholder="Digite o nome do produto aqui">
+                        <input type="text" id="produtos" required placeholder="Digite o nome do produto aqui">
                     </label>
-                    <label>Categoria*
-                        <select id="Categoria">
-                        <option value=""></option>
-                        <option value="">PC Gamer</option>
-                        <option value="">Smartphone</option>
-                        <option value="">Cadeira</option>
-                        <option value="">Sei la</option>
+
+                    <label for="categoria">Categoria*
+                        <select id="categoria" required>
+                            <option value="">Selecione</option>
+                            <option value="PC Gamer">PC Gamer</option>
+                            <option value="Smartphone">Smartphone</option>
+                            <option value="Cadeira">Cadeira</option>
+                            <option value="Sei la">Sei lá</option>
                         </select>
                     </label>
-                    <label for="preco">Preço(R$)
-                    <input type="number" name="" id="preco" step="0.01" min="0" placeholder="0.00" required>
+
+                    <label for="preco">Preço (R$)*
+                        <input type="number" id="preco" step="0.01" min="0" required placeholder="0.00">
                     </label>
+
                     <label for="quantidade">Quantidade*
-                        <input type="number" name="" id="" min="0" step="1" required placeholder="Digite a Quantidade">
+                        <input type="number" id="quantidade" min="1" step="1" required placeholder="Digite a quantidade">
                     </label>
                 </div>
+
                 <div class="botoes">
                     <button type="submit" id="btnSalvar">Adicionar</button>
                     <button type="reset" id="btnLimpar">Limpar</button>
                 </div>
+
+                <p id="mensagem" class="mensagem"></p>
             </form>
-         </section>
-            <section class="conteudo-formulario">
-                <div class="cabecalho-tabela">
-                    <h2>Produtos Cadastrados</h2>
-                    <input type="search" name="" id="Buscar" placeholder="Buscar Produto">
-                    </div>
-                    <div class="secao-tabela">
-                        <table class="tabela">
-                            <thead>
-                                <tr>
-                                    <th>Produto</th>
-                                    <th>Categoria</th>
-                                    <th>Preço(R$)</th>
-                                    <th>Quantidade</th>
-                                    <th>Total(R$)</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                    <div class="resumo">
-                        <span>Total de itens: <strong>0</strong></span>
-                        <span>Valor total: <strong>0</strong></span>
-                    </div>
-            </section>
-      </main>
-      <footer class="rodape">
+        </section>
+
+        <!-- Tabela -->
+        <section class="conteudo-formulario">
+            <div class="cabecalho-tabela">
+                <h2>Produto Cadastrados</h2>
+                <input type="search" id="buscar" placeholder="Buscar Produto">
+            </div>
+
+            <div class="secao-tabela">
+                <table id="tabela" class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="resumo">
+                <span>Total de itens: <strong id="totalItens">0</strong></span>
+                <span>Valor total: <strong id="valorTotal">R$ 0,00</strong></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
         <small>&copy; Designed by César</small>
-      </footer>
+    </footer>
+
+    <!-- Script -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>

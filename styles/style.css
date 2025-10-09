@@ -1,20 +1,20 @@
 :root {
---bg:#50b3f5b9;
---card:#9efd04;
---text:#0fc956;
---muted:#b9e90d;
---primary:#f725b1;
---border:#41ff11;
+--bg:#aaaaaa;
+--card:#b6b6b6;
+--text:#cf0000;
+--muted:hsl(73, 89%, 48%);
+--primary:#e69b11;
+--border:#000000;
 
 }
 
 .dark {
---bg:hwb(216 23% 2%);
+--bg:hwb(197 3% 21%);
 --card:#c42727;
 --text:#0fc956;
---muted:#b9e90d;
---primary:#f725b1;
---border:#ff8800;
+--muted:#dbe2c2;
+--primary:#1d0aca;
+--border:#282928;
 
 }
 
@@ -41,4 +41,131 @@ h1, h2 {
    padding: 0.75rem;
    border-bottom: 1px solid var(--border);
    background-color: var(--card);
+}
+
+.cabecalho h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+
+}
+
+.conteudo-formulario {
+    background-color: #ffffff38;
+    border: 1px solid var(--bg);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 0 rgba(112, 109, 109, 0.959);
+}
+
+.grade {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35;
+    font-size: 0.95rem;
+    
+}
+
+input, select {
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: transparent;
+    color: inherit;
+    margin-top: 10px;
+}
+
+input::placeholder {
+    background-color: rgb(255, 255, 255)
+}
+
+.botoes {
+    display: flex;
+    gap: 0.9rem;
+    margin-top: 0.75rem;
+
+}
+
+button {
+    padding: 0.45rem 0.65rem;
+    border-radius: 12px;
+    border: 1px solid var(--primary);
+    background-color: #909fca;
+    color: #250325;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+button.outline {
+    background: transparent;
+    color: #000000;
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+}
+
+.mensagem {
+    min-height: 1.25rem;
+    color: #250325;
+    margin: 0.25rem 0 0;
+}
+
+.cabecalho-tabela {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75;
+}
+
+.secao-tabela {
+    overflow: auto;
+    border: 1px solid #919e94;
+    border-radius: 10px;
+
+}
+
+.tabela {
+    width: 100%;
+    
+}
+
+th, td {
+    padding: 0.6rem;
+    border-bottom: 1px solid #000000;
+    text-align: left;
+}
+
+th {
+    background-color: #fdfdfd;
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: #c42727;
+
+}
+
+.resumo {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 0.5rem 0.2rem;
+    color: aqua;
+}
+
+.rodape {
+    text-align: center;
+    padding: 1rem;
+    color: #690cff;
 }
