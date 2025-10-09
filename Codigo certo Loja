@@ -1,0 +1,41 @@
+form.addEventListener('submit', (ev) => {
+  ev.preventDefault();
+
+  const nome = inputNome.value.trim();
+  const categoria = selectCategoria.value;
+  const preco = Number(inputPreco.value);
+  const quantidade = parseInt(inputQtde.value, 10);
+
+  if (!nome) {
+    showMsg('Informe o nome do produto.');
+    inputNome.focus();
+    return;
+  }
+  if (!Number.isFinite(preco) || preco < 0) {
+    showMsg('Preço inválido (deve ser ≥ 0).');
+    inputPreco.focus();
+    return;
+  }
+  if (!Number.isInteger(quantidade) || quantidade < 1) {
+    showMsg('Quantidade inválida (deve ser inteiro ≥ 1).');
+    inputQtde.focus();
+    return;
+  }
+
+  const produto = {
+    id: Math.random().toString(36).slice(2, 9),
+    nome,
+    categoria,
+    preco,
+    quantidade
+  };
+
+  produtos.push(produto);
+  salvar();
+  render();
+
+  form.reset();
+  inputQtde.value = 1;
+  inputNome.focus();
+  showMsg('Produto adicionado!');
+});
